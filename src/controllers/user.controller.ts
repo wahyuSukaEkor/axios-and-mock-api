@@ -6,7 +6,7 @@ import axios from "axios";
 async function GetAllExpense(req: Request, res: Response, next: NextFunction) {
   try {
     const { category } = req.query;
-    let mockAPIUrl = null;
+    let mockAPIUrl = MOCK_API_URL;
     if (category) {
     mockAPIUrl = `${MOCK_API_URL}/expense?category=${category}`;
     } else {
